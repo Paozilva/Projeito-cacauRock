@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CacauRock - Chocolates</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./logomarca.png" />
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
+      background-size: cover;
+      font-family: 'Rock Salt', cursive;
+      color: #2f2f2f;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .logo {
+      max-width: 250px;
+      margin: 30px auto;
+      display: block;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-cadastro {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      background-color: #b76a40;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-cadastro:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.05);
+      margin-top: 40px;
+    }
+    .social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #723314;
+  font-size: 1.8rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #2f2f2f;
+  transform: scale(1.2);
+}
+.social-icons a {
+  display: inline-block;
+  margin: 5px;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-size: 1.6rem;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #b76a40;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .btn-cadastro {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+.btn-custom {
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #471e0a, #b76a40, #d1a77c, #dad0c4);
+  background-size: 400% 400%;
+  border: none;
+  transition: background-position 0.5s, transform 0.2s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-custom:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  color: #fff;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="menu-links text-center">
+    <a class="btn-custom" href="./login.html" target="_blank"><i class="fas fa-sign-in-alt"></i> Login</a>
+    <a class="btn-custom" href="./cadastro.html" target="_blank"><i class="fas fa-user-plus"></i> Cadastro</a>
+    <a class="btn-custom" href="./minhas-compras" target="_blank"><i class="fas fa-book-open"></i> Minhas Compras</a>
+    <a class="btn-custom" href="./atualizacao.html" target="_blank"><i class="fas fa-edit"></i> Atualização</a>
+    <a class="btn-custom" href="./remocao.html" target="_blank"><i class="fas fa-trash-alt"></i> Remoção</a>
+  </div>
+  
+
+  <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
+  <h1 class="title">Bem-vindo à CacauRock</h1>
+
+  <a href="./cadastro.html" class="btn btn-cadastro">
+    <i class="fas fa-user-plus"></i> Cardápio: Comece sua jornada no mundo do chocolate !
+    
+  </a>
+
+  <section class="galeria">
+    <img src="choco.jpg" alt="Chocolate 1">
+    <img src="choco2.jpg" alt="Chocolate 2">
+    <img src="choco1.jpg" alt="Chocolate 4">
+    <img src="choco6.jpg" alt="Chocolate 5">
+  </section>
+  <footer>
+    &copy; 2025 CacauRock Chocolates - Todos os direitos reservados.
+  
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tuperfil" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/tuperfil" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/tuperfil" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://wa.me/SEUNUMERO" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    
+  </footer>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho - CacauRock</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./logomarca.png" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2f2f2f;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 30px auto;
+    }
+
+    h1.title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+
+    .item-carrinho {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .item-carrinho img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .item-info {
+      flex: 1;
+    }
+
+    .item-info h5 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .item-info p {
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+
+    .total {
+      text-align: right;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .btn-finalizar {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 30px;
+      font-weight: bold;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #471e0a, #b76a40, #d1a77c);
+      background-size: 400% 400%;
+      border: none;
+      color: white;
+      transition: background-position 0.5s, transform 0.2s ease;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .btn-finalizar:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
+    <h1 class="title">Meu Carrinho</h1>
+
+    <div class="item-carrinho">
+      <img src="p3.png" alt="Ovo de Pistache">
+      <div class="item-info">
+        <h5>Ovo Recheado de Pistache</h5>
+        <p><strong>Quantidade:</strong> 1</p>
+        <p><strong>Preço:</strong> R$ 89,00</p>
+      </div>
+    </div>
+
+    <div class="item-carrinho">
+      <img src="p1.jpg" alt="Trio Mini Ovinhos">
+      <div class="item-info">
+        <h5>Trio Mini Ovinhos Gourmet</h5>
+        <p><strong>Quantidade:</strong> 2</p>
+        <p><strong>Preço:</strong> R$ 298,00</p>
+      </div>
+    </div>
+
+    <div class="total">
+      Total: R$ 387,00
+    </div>
+
+    <a href="./finalizar.html" class="btn-finalizar"><i class="fas fa-credit-card"></i> Finalizar Compra</a>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio - Rock</title>
+    <link rel="shortcut icon" href="./logomarca.png" />
+    <style>
+body {
+  background: linear-gradient(135deg, #471e0a, #b76a40, #d1a77c, #dad0c4);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.product-card {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.product-card h2 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.peso {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.price {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #471e0a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #f4e2d8;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Catálogo Rock</h1>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./choco.jpg" alt="Ovo Leite Ninho e Nutella">
+        <h2>Brigadeiro</h2>
+        <p> Brigadeiro de Chocolate de Leite reicheio de nozes é Nutella.</p>
+        <span class="peso">Peso: 15g cada um</span>
+        <span class="price">R$ 5,00 cada um</span>
+        <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="./choco 1.jpg" alt="Ovo Leite Ninho e Nutella">
+        <h2>Ovo de chocolate meio amargo e brigaderiro branco</h2>
+        <p>Casca de chocolate meio amargo reicheio brigaderiro branco com nozes.</p>
+        <span class="peso">Peso: 400g</span>
+        <span class="price">R$ 105,00</span>
+        <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+        <img src="./choco 2.jpg" alt="Ovo Leite Ninho e Nutella">
+        <h2>Alfajores de chocolate Guada da Argentina</h2>
+        <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+        <span class="peso">Peso: 400g</span>
+        <span class="price">R$ 105,00</span>
+        <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product-card">
+          <img src="./choco 6.jpg" alt="Ovo Leite Ninho e Nutella">
+          <h2>Mousse de Chocolate Branco</h2>
+          <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+          <span class="peso">Peso: 25g</span>
+          <span class="price">R$ 25,00</span>
+          <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./choco 19.png" alt="Ovo Leite Ninho e Nutella">
+            <h2>Ovos de Chocolate amargo reicheio de brigaderiro</h2>
+            <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+            <span class="peso">Peso: 400g</span>
+            <span class="price">R$ 160,00</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+            <img src="./choco 7.jpg" alt="Ovo Leite Ninho e Nutella">
+            <h2>Brownie com cobertura de chocolate branco </h2>
+            <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+            <span class="peso">Peso: 400g</span>
+            <span class="price">R$ 160,00</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="./choco 5.png" alt="Ovo Leite Ninho e Nutella">
+          <h2>Caixa de chocolate branco Belga</h2>
+          <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+          <span class="peso">Peso: 400g</span>
+          <span class="price">R$ 160,00</span>
+          <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+      </div>
+        <div class="product-card">
+            <img src="./choco 13.png" alt="Ovo Leite Ninho e Nutella">
+            <h2>Caixa de chocolates Finos </h2>
+            <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+            <span class="peso">Peso: 400g</span>
+            <span class="price">R$ 160,00</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>
+      <div class="product-card">
+        <img src="./choco 11.png" alt="Ovo Leite Ninho e Nutella">
+        <h2>Caixa de Chocolates Finos</h2>
+        <p>Casca de chocolate ao leite belga recheada com camadas de brigadeiro de Leite Ninho e Nutella.</p>
+        <span class="peso">Peso: 400g</span>
+        <span class="price">R$ 95,00</span>
+        <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="product-card">
+        <img src="./choco 9.png" alt="Ovo Leite Ninho e Nutella">
+        <h2>Doces finos alemães</h2>
+        <p>Doces alemães de chocolate, recheados com doce de leite, nutella, amêndoas, doce de morango e decorados com chocolate branco.</p>
+        <span class="peso">Peso: 400g</span>
+        <span class="price">R$ 160,00</span>
+        <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+    </div>
+        <div class="product-card">
+            <img src="./choco 3.webp" alt="Ovo Leite Ninho e Nutella">
+            <h2>Biscoitos de chocolate</h2>
+            <p>Biscoitos de amendoim e leite com cobertura de chocolate meio amargo e branco, decorados com doce de leite no topo.</p>
+            <span class="peso">Peso: 400g</span>
+            <span class="price">R$ 110,00</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div> 
+        <div class="product-card">
+            <img src="./choco 10.png" alt="Ovo Leite Ninho e Nutella">
+            <h2>Dinossauros de chocolate Leite </h2>
+            <p>Dinossauros de chocolate ao leite com recheio de doce de leite Nutella.</p>
+            <span class="peso">Peso: 400g</span>
+            <span class="price">R$ 90,00</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product-card">
+          <img src="./choco 4.jpg" alt="Ovo Leite Ninho e Nutella">
+          <h2>Ovos de chocolate coloridos com recheio de frutas</h2>
+          <p>Ovos de chocolate coloridos com recheio de frutas, casca de chocolate trazida da Suíça com diferentes recheios de doces de frutas.</p>
+          <span class="peso">Peso: 200g</span>
+          <span class="price">R$ 80,00</span>
+          <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+      </div>
+        <div class="product-card">
+            <img src="./chocolate.jpg" alt="Ovo Leite Ninho e Nutella">
+            <h2>Trufas de chocolate recheada com doce de frutas</h2>
+            <p>Trufas de chocolate branco, meio amargo, amargo reicheio de doce das frutas.</p>
+            <span class="peso">Peso: 15g un</span>
+            <span class="price">R$ 6,00 un</span>
+            <button onclick="adicionarCarrinho('Leite Ninho e Nutella')">Adicionar ao Carrinho</button>
+        </div>  
+    </div>
+    
+    <script src="script.js"></script>
+</body>

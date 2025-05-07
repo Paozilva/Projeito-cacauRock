@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acompanhamento de Pedido - CacauRock</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./logomarca.png">
+  <style>
+    body {
+      background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
+      background-size: cover;
+      font-family: 'Rock Salt', cursive;
+      color: #2f2f2f;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 30px auto;
+    }
+    h1.title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+    .status-box {
+      background-color: rgba(255,255,255,0.95);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .status-step {
+      padding: 10px 0;
+      border-left: 5px solid #d1a77c;
+      margin-left: 15px;
+      padding-left: 15px;
+      position: relative;
+    }
+    .status-step::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 12px;
+      width: 15px;
+      height: 15px;
+      background-color: #b76a40;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      z-index: 1;
+    }
+    .status-step.active::before {
+      background-color: #471e0a;
+    }
+    .status-step h5 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .status-step small {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo CacauRock" class="logo">
+    <h1 class="title">Acompanhamento do Pedido</h1>
+
+    <div class="status-box">
+      <div class="status-step active">
+        <h5>Pedido Confirmado</h5>
+        <small>Recebemos sua solicitação em 20/04/2025</small>
+      </div>
+      <div class="status-step active">
+        <h5>Pedido em Preparação</h5>
+        <small>Estamos preparando seus chocolates</small>
+      </div>
+      <div class="status-step">
+        <h5>Pedido Enviado</h5>
+        <small>Logo estará com a transportadora</small>
+      </div>
+      <div class="status-step">
+        <h5>Pedido Entregue</h5>
+        <small>Entrega prevista até 23/04/2025</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

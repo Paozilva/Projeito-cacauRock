@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remoção</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css" />
+    <link rel="shortcut icon" href="./logomarca.png" />
+    />
+  <style>
+    body {
+      background: linear-gradient(135deg,  #471e0a, #b76a40, #d1a77c, #dad0c4);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      min-height: 100vh;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      color: #b76a40;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      background: linear-gradient(to right, #471e0a, #b76a40,);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 30px;
+    }
+
+    label {
+      color: #d1a77c;
+    }
+
+    .form-control {
+      border: 2px solid #471e0a;
+    }
+
+    .form-control:focus {
+      border-color: #8a3a11;
+      box-shadow: 0 0 8px #471e0a;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #d1a77c, #dad0c4);
+      border: none;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(to right,#8a3a11, #d1a77c);
+      color: #471e0a;
+    }
+
+    .btn-secondary {
+      background-color: #d1a77c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .btn-secondary:hover {
+      background-color: #471e0a;
+      color: #fff;
+    }
+
+    .btn i {
+      margin-right: 5px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+    .logo {
+      /* max-width: 20px; */
+      margin: 30px auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+    <div class="container mt-2">
+        <h2 class="mb-4">Remoção</h2>
+        <form id="frmRemocao">
+            <div class="mb-3">
+                <select id="selId" class="form-select" aria-label="Selecione aqui o registro">
+                    <option value="0" selected>Selecione aqui o registro</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="txtId" class="form-label">Id:</label>
+                <input type="text" class="form-control" id="txtId" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="txtNome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="txtNome" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="txtLogin" class="form-label">Login:</label>
+                <input type="text" class="form-control" id="txtLogin" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="txtSenha" class="form-label">Senha:</label>
+                <input type="password" class="form-control" id="txtSenha" readonly>
+            </div>
+            <button type="submit" class="btn btn-warning">Remover</button>
+            <a type="cancel" class="btn btn-dark" onclick="limparCampos()">Cancelar</a>
+        </form>
+        <hr class="divider" />
+        <h6 id="notificacao">Barra de notificações</h6>
+    </div>
+    <script src="./remocao.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./fontawesome-free-6.7.2-web/js/all.min.js"></script>
+</body>
+
+</html>

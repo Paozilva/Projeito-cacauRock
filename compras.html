@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Compras - CacauRock</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./logomarca.png" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2f2f2f;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 30px auto;
+    }
+
+    h1.title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+
+    .compra {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .compra h5 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .compra p {
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+    }
+
+    .btn-voltar {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 10px 30px;
+      font-weight: bold;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #471e0a, #b76a40, #d1a77c);
+      background-size: 400% 400%;
+      border: none;
+      color: white;
+      transition: background-position 0.5s, transform 0.2s ease;
+      text-decoration: none;
+      display: block;
+      width: fit-content;
+    }
+
+    .btn-voltar:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
+    <h1 class="title">Minhas Compras</h1>
+
+    <div class="compra">
+      <h5>Pedido #1204</h5>
+      <p><strong>Data:</strong> 10/04/2025</p>
+      <p><strong>Status:</strong> Entregue - Recebido por João</p>
+      <p><strong>Itens:</strong> Ovo Gourmet Leite Ninho, Caixa de Trufas Sortidas</p>
+      <p><strong>Total:</strong> R$ 345,00</p>
+    </div>
+
+    <div class="compra">
+      <h5>Pedido #1198</h5>
+      <p><strong>Data:</strong> 27/03/2025</p>
+      <p><strong>Status:</strong> Entregue - Recebido por João</p>
+      <p><strong>Itens:</strong> Ovo de Colher Pistache, Barra Crocante</p>
+      <p><strong>Total:</strong> R$ 198,00</p>
+    </div>
+
+    <a href="./index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

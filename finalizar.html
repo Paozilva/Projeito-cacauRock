@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra - CacauRock</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./logomarca.png">
+  <style>
+    body {
+      background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2f2f2f;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .logo {
+      max-width: 200px;
+      display: block;
+      margin: 30px auto;
+    }
+    h1.title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+    }
+    form {
+      background-color: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .form-control {
+      border: 2px solid #b76a40;
+      border-radius: 10px;
+    }
+    .form-control:focus {
+      box-shadow: 0 0 8px #b76a40;
+    }
+    .btn-finalizar {
+      margin-top: 20px;
+      width: 100%;
+      background: linear-gradient(135deg, #471e0a, #b76a40, #d1a77c);
+      background-size: 400% 400%;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-position 0.5s, transform 0.2s ease;
+    }
+    .btn-finalizar:hover {
+      background-position: right center;
+      transform: scale(1.05);
+    }
+    select{
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
+    <h1 class="title">Finalizar Compra</h1>
+    <form>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome Completo</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+      </div>
+      <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco" placeholder="Rua, número, bairro, cidade" required>
+      </div>
+      <div class="mb-3">
+        <label for="CPF" class="form-label">CPF</label>
+        <input type="text" class="form-control" id="endereco" placeholder="Digite seu CPF" required>
+      </div>
+      <div class="mb-3">
+        <label for="pagamento" class="form-label">Forma de Pagamento</label>
+        <select class="form-control" id="pagamento" required>
+          <option value="">Selecione...</option>
+          <option value="pix">PIX</option>
+          <option value="boleto">Boleto Bancário</option>
+          <option value="cartao">Cartão de Débito</option>
+          <option value="cartao">Cartão de Crédito</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-finalizar">
+        <i class="fas fa-check-circle"></i> Confirmar Pedido
+      </button>
+    </form>
+  </div>
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
