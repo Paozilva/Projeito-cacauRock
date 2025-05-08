@@ -19,15 +19,17 @@ app.post('/api/mysql', async (req, res) => {
     var srvDatabase = 'cacau_rock';
 
     if (domain != "localhost") {
-        srvHost = 'sql.freedb.tech';
-        srvUser = 'freedb_cacau_rock';
-        srvPassword = '%utdX@3uQp$t&ZQ';
-        srvDatabase = 'freedb_cacau_rock';
+        srvHost = 'shuttle.proxy.rlwy.net';
+        srvUser = 'root';
+        srvPort='10304';
+        srvPassword = 'OOupKOKoUuPOxYjoywdOvKpxFvHRQjNh';
+        srvDatabase = 'railway';
     }
 
     const pool = mysql.createPool({
         host: srvHost,
         user: srvUser,
+        port: srvPort,
         password: srvPassword,
         database: srvDatabase
     });
