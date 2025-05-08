@@ -14,6 +14,7 @@ app.post('/api/mysql', async (req, res) => {
     const { nome, login, senha, tipo, id, domain } = req.body;
 
     var srvHost = '127.0.0.1';
+    var srvPort = '3306'
     var srvUser = 'root';
     var srvPassword = 'senac@02';
     var srvDatabase = 'cacau_rock';
