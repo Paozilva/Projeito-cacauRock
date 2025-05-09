@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CacauRock</title>
+  <title>CacauRock - Chocolates</title>
+  <script src="./session.js"></script>
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="shortcut icon" href="./logomarca.png" />
-
+  </script>
   <style>
     body {
       background: linear-gradient(135deg, #dad0c4, #d1a77c, #b76a40);
@@ -77,6 +79,34 @@
       background-color: rgba(0, 0, 0, 0.05);
       margin-top: 40px;
     }
+    .social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #723314;
+  font-size: 1.8rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #2f2f2f;
+  transform: scale(1.2);
+}
+.social-icons a {
+  display: inline-block;
+  margin: 5px;
+  background-color: #2f2f2f;
+  color: #fff;
+  font-size: 1.6rem;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
 
 @media (max-width: 576px) {
   .title {
@@ -104,11 +134,6 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.btn-custom:hover {
-  background-position: right center; 
-  transform: scale(1.05);
-  color: #fff;
-}
 .social-icons {
     display: flex;
     gap: 30px;
@@ -118,7 +143,7 @@
   }
 
   .social-icons a {
-    font-size: 40px;
+    font-size: 30px;
     color: #ebb33b;
     transition: color 0.6s ease;
   }
@@ -143,6 +168,7 @@
   .social-icons a:active .fa-whatsapp {
     color: #25D366;
 
+  }
 
 
   </style>
@@ -150,7 +176,7 @@
 
 <body>
   <div class="menu-links text-center">
-    <a class="btn-custom" href="./login.html" target="_blank"><i class="fas fa-sign-in-alt"></i> Login</a>
+    <a class="btn-custom" href="./login.html" target="_blank"><i class="fa-solid fa-user"></i> Logado</a>
     <a class="btn-custom" href="./cadastro.html" target="_blank"><i class="fas fa-user-plus"></i> Cadastro</a>
     <a class="btn-custom" href="./cardapio2.html" target="_blank"><i class="fa fa-book"></i> Cardápio</a>
     <a class="btn-custom" href="./compras.html" target="_blank"><i class="fa-solid fa-circle-check"></i> Minhas Compras</a>
@@ -159,7 +185,7 @@
   </div>
   
 
-  <img src="logomarca.png" alt="Logo CacauRock" class="logo" />
+  <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
   <h1 class="title">Bem-vindo ao CacauRock</h1>
 
   <a href="./cardapio.html" class="btn btn-cadastro">
@@ -168,7 +194,7 @@
   </a>
 
   <section class="galeria">
-    <img src="choco 3.webp" alt="Chocolate 1">
+    <img src="choco.jpg" alt="Chocolate 1">
     <img src="choco 2.jpg" alt="Chocolate 2">
     <img src="choco 1.jpg" alt="Chocolate 4">
     <img src="choco 6.jpg" alt="Chocolate 5">
@@ -176,7 +202,7 @@
   <footer>
     &copy; 2025 CacauRock Chocolates - Todos os direitos reservados.
   
-    <div class="social-icons">
+        <div class="social-icons">
       <a href="https://www.instagram.com/tuperfil" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/tuperfil" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
       <a href="https://www.youtube.com/tuperfil" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -184,9 +210,30 @@
     </div>
     
   </footer>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script>
+  const usuarioLogado = localStorage.getItem('usuario_logado');
 
-  <script src="./index.js"></script>
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  if (usuarioLogado) {
+
+    const musica = new Audio("metalica.mp3");
+    musica.loop = true; 
+    musica.play().catch((err) => {
+      console.log("Erro ao tentar tocar a música:", err);
+    });
+  }
+
+  </script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 </html>
+

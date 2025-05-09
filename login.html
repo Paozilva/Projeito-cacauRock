@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
   <link rel="shortcut icon" href="./logomarca.png" />
 
   <style>
@@ -125,7 +127,7 @@
           <input type="password" class="form-control" id="txtSenha" placeholder="Digite sua Senha" />
         </div>
       </div>                
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary" onclick="musica()">
         <i class="fas fa-sign-in-alt"></i> LOGIN
       </button>
       <div class="d-flex justify-content-between mt-3">
@@ -137,6 +139,16 @@
     </form>
   </div>
 
+  <script>
+    function musica(){
+      let btnm = document.querySelector(".btn");
+      let mus = new Audio();
+    if(rows.length === 1)
+      mus.src = "metalica.mp3";
+      mus.play();
+    }
+    let btnm = document.querySelector(".btn");
+  </script>
   <script src="./login.js"></script>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
