@@ -134,42 +134,27 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.social-icons {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  .social-icons a {
-    font-size: 30px;
-    color: #ebb33b;
-    transition: color 0.6s ease;
-  }
-
-  /* Efectos por red social */
-  .social-icons a:hover .fa-instagram,
-  .social-icons a:active .fa-instagram {
-    color: #E1306C;
-  }
-
-  .social-icons a:hover .fa-facebook-f,
-  .social-icons a:active .fa-facebook-f {
-    color: #1877F2;
-  }
-
-  .social-icons a:hover .fa-youtube,
-  .social-icons a:active .fa-youtube {
-    color: #FF0000;
-  }
-
-  .social-icons a:hover .fa-whatsapp,
-  .social-icons a:active .fa-whatsapp {
-    color: #25D366;
-
-  }
-
+.btn-custom:hover {
+  background-position: right center; 
+  transform: scale(1.05);
+  color: #fff;
+}
+#insta:hover {
+  background: linear-gradient(to bottom, #e1306c, #bc2a8d, #833ab4);
+  transform: scale(1.1);
+}
+#face:hover {
+  background-color: #1877f2;
+  transform: scale(1.1);
+}
+#you:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+}
+#whats:hover {
+  background-color: #25d366;
+  transform: scale(1.1);
+}
 
   </style>
 </head>
@@ -185,7 +170,7 @@
   </div>
   
 
-  <img src="logo.jpg" alt="Logo CacauRock" class="logo" />
+  <img src="logotransp.png" alt="Logo CacauRock" class="logo" />
   <h1 class="title">Bem-vindo ao CacauRock</h1>
 
   <a href="./cardapio.html" class="btn btn-cadastro">
@@ -202,11 +187,11 @@
   <footer>
     &copy; 2025 CacauRock Chocolates - Todos os direitos reservados.
   
-        <div class="social-icons">
-      <a href="https://www.instagram.com/tuperfil" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/tuperfil" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.youtube.com/tuperfil" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/SEUNUMERO" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <div class="social-icons">
+      <a id="insta" href="https://www.instagram.com/tuperfil" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a id="face" href="https://www.facebook.com/tuperfil" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a id="you" href="https://www.youtube.com/tuperfil" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+      <a id="whats" href="https://wa.me/SEUNUMERO" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
     
   </footer>
